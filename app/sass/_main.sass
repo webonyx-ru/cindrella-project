@@ -217,11 +217,15 @@ $yellow: #6dc101
 	position: relative
 	display: block
 	padding: 40px 0
+	font-family: 'TruthCYR-Regular', serif
+	min-width: 320px
 
 	&__title
 		font-size: 28px
 		line-height: 1.14
 		color: $black
+		font-weight: normal
+		font-family: 'TruthCYR-Regular', serif
 
 		&_info
 			font-size: 16px
@@ -233,6 +237,8 @@ $yellow: #6dc101
 			font-size: 20px
 			line-height: 1.15
 			color: $black
+			font-weight: normal
+			font-family: 'TruthCYR-Regular', serif
 
 	&__text
 		font-size: 14px
@@ -243,8 +249,32 @@ $yellow: #6dc101
 .s__compare
 	padding: 30px 0 62px 0
 
+	.section__title
+		font-family: 'TruthCYR-Light', serif
+		font-weight: normal
+
 	&Info
-		background-color: #e8edfa
+		position: relative
+		z-index: 2
+		background: transparent
+
+		&_bg
+			background-image: url('../images/compare-info-section-bg.jpg'), -webkit-linear-gradient(to right, rgba(78, 182, 255, .06), rgba(12, 117, 192, .06))
+			background-image: url('../images/compare-info-section-bg.jpg'), -moz-linear-gradient(to right, rgba(78, 182, 255, .06), rgba(12, 117, 192, .06))
+			background-image: url('../images/compare-info-section-bg.jpg'), -o-linear-gradient(to right, rgba(78, 182, 255, .06), rgba(12, 117, 192, .06))
+			background-image: url('../images/compare-info-section-bg.jpg'), linear-gradient(to right, rgba(78, 182, 255, .06), rgba(12, 117, 192, .06))
+			background-size: cover
+			position: absolute
+			top: 0
+			bottom: 0
+			left: 0
+			right: 0
+			opacity: 0.2
+			z-index: 1
+
+		.cont_wrap
+			position: relative
+			z-index: 3
 
 	&_box
 		font-size: 0
@@ -330,6 +360,8 @@ $yellow: #6dc101
 		.article__title
 			font-size: 24px
 			margin-bottom: 10px
+			font-family: 'TruthCYR-Regular', serif
+			font-weight: normal
 
 		.article__info
 			font-size: 0
@@ -363,8 +395,6 @@ $yellow: #6dc101
 		&:first-child
 			margin-right: -5px
 
-
-
 .s_compareInfo_grid
 	margin: 30px 0 0 0
 
@@ -381,6 +411,9 @@ $yellow: #6dc101
 		> article
 			min-height: 150px
 			margin: 20px 0 0 0
+
+			.section__text
+				font-family: 'TruthCYR-Light', serif
 
 		&.s_compareInfo_grid_image
 			max-width: 420px
@@ -478,6 +511,13 @@ $yellow: #6dc101
 	box-shadow: 0 1px 4px 0 rgba(130, 130, 130, 0.5)
 	padding: 0 0 18px 0
 	+box_sizing(border-box)
+	+transition(all .2s ease-in-out)
+
+	&:hover
+		-webkit-transform: scale(1.02)
+		-moz-transform: scale(1.02)
+		-o-transform: scale(1.02)
+		transform: scale(1.02)
 
 	&_thumb
 		position: relative
@@ -485,15 +525,18 @@ $yellow: #6dc101
 		width: 100%
 		height: 165px
 
-		> img
-			width: 100%
-			height: 100%
-			object-fit: contain
-			+border_radius(10px 10px 0 0)
+		> a
+			display: block
+
+			> img
+				width: 100%
+				height: 100%
+				object-fit: contain
+				+border_radius(10px 10px 0 0)
 
 		.fri
 			position: absolute
-			top: -2px
+			top: -5px
 			left: -5px
 			z-index: 2
 
@@ -506,6 +549,8 @@ $yellow: #6dc101
 		+box_sizing(border-box)
 		text-align: center
 		margin: 14px auto 0 auto
+		font-weight: normal
+		font-family: 'TruthCYR-Regular', serif
 
 		&::after
 			content: ''
