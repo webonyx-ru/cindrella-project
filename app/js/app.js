@@ -1,16 +1,21 @@
 (function() {
 
-function CINDRELLAPROJECT() {
+function CINDRELLAPROJECT(doc) {
 	var _self = this;
 
-	_self.constructor();
+	_self.doc = doc;
+
+	_self.constructor(_self);
 }
 
 CINDRELLAPROJECT.prototype.constructor = function() {
-	console.log('This is a constructor function...');
+	var progressBars = this.doc.querySelectorAll('[data-progress-bar]');
+
+	for(var i=0; i<progressBars.length; i++) {
+		progressBars[i].style.width = progressBars[i].dataset.progressBar;
+	}
 }
 
-var app = new CINDRELLAPROJECT;
-
+var app = new CINDRELLAPROJECT(document);
 
 })();

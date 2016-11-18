@@ -1,0 +1,278 @@
+.cont_wrap
+	min-width: 320px
+
+// Colors
+$white: #fff
+$black: #000
+$green: #00cf6b
+$greenLighter: #00d5a1
+$red: #ff343b
+$blue: #5c73e2
+$blueLight: #44b3fc
+$pink: #da56e7
+$light: #eff2fb
+
+
+.cl-white
+	color: $white!important
+
+.cl-black
+	color: $black!important
+
+.cl-pink
+	color: $pink!important
+
+.cl-light
+	color: $light!important
+
+.bg-green
+	background-color: $green
+
+.bg-red
+	background-color: $red
+
+.bg-blue
+	background-color: $blue
+
+.bg-gradient-pink
+	background-image: -webkit-linear-gradient(62deg, #891c7e, #c96dd8)
+	background-image: -moz-linear-gradient(62deg, #891c7e, #c96dd8)
+	background-image: -o-linear-gradient(62deg, #891c7e, #c96dd8)
+	background-image: linear-gradient(62deg, #891c7e, #c96dd8)
+
+.bg-gradient-pink-light
+	background-image: -webkit-linear-gradient(to left, #cf2dd5, #ef73f5)
+	background-image: -moz-linear-gradient(to left, #cf2dd5, #ef73f5)
+	background-image: -o-linear-gradient(to left, #cf2dd5, #ef73f5)
+	background-image: linear-gradient(to left, #cf2dd5, #ef73f5)
+
+.bg-gradient-blue
+	background-image: -webkit-linear-gradient(to right, #4eb6ff, #39a1ea)
+	background-image: -moz-linear-gradient(to right, #4eb6ff, #39a1ea)
+	background-image: -o-linear-gradient(to right, #4eb6ff, #39a1ea)
+	background-image: linear-gradient(to right, #4eb6ff, #39a1ea)
+
+.txt-center
+	text-align: center!important
+
+.txt-right
+	text-align: right!important
+
+.txt-left
+	text-align: left!important
+
+.mw-456
+	max-width: 456px!important
+
+.circle__normal
+	width: 65px
+	height: 65px
+	+border_radius(50%)
+	text-align: center
+
+	&::before
+		display: inline-block
+		height: 100%
+		content: ''
+		vertical-align: middle
+
+	&-green
+		@extend .circle__normal
+		@extend .bg-green
+
+	&-red
+		@extend .circle__normal
+		@extend .bg-red
+
+	&-blue
+		@extend .circle__normal
+		@extend .bg-blue
+
+.circle__smaller
+	width: 49px
+	height: 49px
+	+border_radius(50%)
+	text-align: center
+
+	&::before
+		display: inline-block
+		height: 100%
+		content: ''
+		vertical-align: middle
+
+	&-green
+		@extend .circle__smaller
+		@extend .bg-green
+
+	&-red
+		@extend .circle__smaller
+		@extend .bg-red
+
+	&-blue
+		@extend .circle__smaller
+		@extend .bg-blue
+
+.circle__small
+	width: 30px
+	height: 30px
+	+border_radius(50%)
+	text-align: center
+
+	&::before
+		display: inline-block
+		height: 100%
+		content: ''
+		vertical-align: middle
+
+	&-green
+		@extend .circle__small
+		@extend .bg-green
+
+	&-red
+		@extend .circle__small
+		@extend .bg-red
+
+	&-blue
+		@extend .circle__small
+		@extend .bg-blue
+
+.img-responsive
+	max-width: 100%
+	width: 100%
+	height: auto
+
+.section
+	width: 100%
+	position: relative
+	display: block
+	padding: 40px 0
+
+	&__title
+		font-size: 28px
+		line-height: 1.14
+		color: $black
+
+		&_info
+			font-size: 16px
+			line-height: 1.44
+			color: $black
+			margin: 23px 0 0 0
+
+	&__text
+		font-size: 14px
+		line-height: 1.64
+		color: $black
+		margin: 6px 0 0 0
+
+.s__compare
+	padding: 30px 0 62px 0
+
+	&_box
+		font-size: 0
+		width: 100%
+		position: relative
+
+		.fri-versus-heart
+			position: absolute
+			z-index: 2
+			left: 50%
+			margin-left: -106px
+			top: 50%
+			margin-top: -106px
+
+		&_item
+			display: inline-block
+			width: 50%
+			font-size: 14px
+			padding: 0 7.5px
+			+box_sizing(border-box)
+			text-align: right
+			position: relative
+			margin: 29px 0 8px 0
+			position: relative
+
+			> div
+				position: absolute
+				text-align: center
+				top: 0
+				right: 0
+				bottom: 0
+				z-index: 2
+				max-width: 477px
+				width: 100%
+
+				&::before
+					content: ''
+					display: inline-block
+					height: 100%
+					vertical-align: middle
+
+				> a
+					&:first-child
+						margin-right: -12px
+
+			> img
+				max-width: 477px
+
+			&:nth-child(2n)
+				text-align: left
+
+				> div
+					left: 0
+
+.s__compareInfo_article
+	margin: 35px 0
+	overflow: hidden
+
+	> div
+		float: left
+
+		&:first-child
+			width: 48px
+			text-align: center
+
+		&:nth-child(2)
+			width: calc(100% - 48px)
+
+	&.article
+		.article__title
+			font-size: 24px
+			margin-bottom: 10px
+
+		.article__info
+			font-size: 0
+
+			> div
+				display: inline-block
+				vertical-align: top
+				font-size: 14px
+
+				&:first-child
+					width: 60%
+
+				&:last-child
+					width: calc(40% - 20px)
+					margin-left: 20px
+
+			.section__text
+				margin: 0
+
+
+.progress-bar
+	height: 20px
+	display: block
+	font-size: 0
+	margin-bottom: 10px
+
+	&-info
+		display: inline-block
+		font-size: 16px
+		vertical-align: top
+
+		&:nth-child(1)
+			max-width: calc(100% - 50px)
+			height: 20px
+
+		&:nth-child(2)
+			margin-left: 5px
+			line-height: 20px
