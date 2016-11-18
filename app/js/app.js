@@ -14,7 +14,23 @@ CINDRELLAPROJECT.prototype.constructor = function() {
 	for(var i=0; i<progressBars.length; i++) {
 		progressBars[i].style.width = progressBars[i].dataset.progressBar;
 	}
-}
+
+	$('.owl-carousel').owlCarousel({
+		loop:true,
+		margin:15,
+		responsive:{
+			0:{
+				items:1
+			},
+			600:{
+				items:3
+			},
+			1000:{
+				items:6
+			}
+		}
+	})
+};
 
 var app = new CINDRELLAPROJECT(document);
 
