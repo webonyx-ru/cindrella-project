@@ -1,9 +1,9 @@
 @font-face {
-  font-family: "TruthCYR-Regular";
+  font-family: "TruthCYR-r";
   src: url("../fonts/TruthCYR-Regular.woff");
 }
 @font-face {
-  font-family: "TruthCYR-Light";
+  font-family: "TruthCYR";
   src: url("../fonts/TruthCYR-Light.woff");
 }
 .fri {
@@ -215,6 +215,14 @@
   min-width: 320px;
 }
 
+[class*='--pink-color'], .--pink-color {
+  color: #da56e7;
+}
+
+[class*='--blue-color'], .--blue-color {
+  color: #3da3ea;
+}
+
 .cl-white {
   color: #fff !important;
 }
@@ -298,7 +306,9 @@
   height: 100%;
 }
 .button__success {
-  background-color: #00d5a1;
+  background-color: #00cf6b;
+  position: relative;
+  z-index: 1;
 }
 .button__danger {
   background-color: #ff343b;
@@ -398,7 +408,7 @@
   position: relative;
   display: block;
   padding: 40px 0;
-  font-family: "TruthCYR-Regular", serif;
+  font-family: "TruthCYR-r", serif;
   min-width: 320px;
 }
 .section__title {
@@ -406,7 +416,7 @@
   line-height: 1.14;
   color: #000;
   font-weight: normal;
-  font-family: "TruthCYR-Regular", serif;
+  font-family: "TruthCYR-r", serif;
 }
 .section__title_info {
   font-size: 16px;
@@ -419,7 +429,7 @@
   line-height: 1.15;
   color: #000;
   font-weight: normal;
-  font-family: "TruthCYR-Regular", serif;
+  font-family: "TruthCYR-r", serif;
 }
 .section__text {
   font-size: 14px;
@@ -428,11 +438,30 @@
   margin: 6px 0 0 0;
 }
 
+h2.mb10, .mb10 {
+  margin-bottom: 10px;
+}
+
+.mb15 {
+  margin-bottom: 15px;
+}
+
+.project-small__circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  margin-right: 5px;
+}
+
+.project-circles__section > .in_bl {
+  margin: 0 15px;
+}
+
 .s__compare {
   padding: 30px 0 62px 0;
 }
 .s__compare .section__title {
-  font-family: "TruthCYR-Light", serif;
+  font-family: "TruthCYR", serif;
   font-weight: normal;
 }
 .s__compareInfo {
@@ -543,7 +572,7 @@
 .s__compareInfo_article.article .article__title {
   font-size: 24px;
   margin-bottom: 10px;
-  font-family: "TruthCYR-Regular", serif;
+  font-family: "TruthCYR-r", serif;
   font-weight: normal;
 }
 .s__compareInfo_article.article .article__info {
@@ -598,7 +627,7 @@
   margin: 20px 0 0 0;
 }
 .s_compareInfo_grid > div > article .section__text {
-  font-family: "TruthCYR-Light", serif;
+  font-family: "TruthCYR", serif;
 }
 .s_compareInfo_grid > div.s_compareInfo_grid_image {
   max-width: 420px;
@@ -633,13 +662,6 @@
 }
 .s_compareInfo_grid > div:first-child {
   text-align: right;
-}
-
-.ad__atolin {
-  background-image: -webkit-linear-gradient(to right, rgba(78, 182, 255, 0.06), rgba(12, 117, 192, 0.06));
-  background-image: -moz-linear-gradient(to right, rgba(78, 182, 255, 0.06), rgba(12, 117, 192, 0.06));
-  background-image: -o-linear-gradient(to right, rgba(78, 182, 255, 0.06), rgba(12, 117, 192, 0.06));
-  background-image: linear-gradient(to right, rgba(78, 182, 255, 0.06), rgba(12, 117, 192, 0.06));
 }
 
 .ad__cinderella {
@@ -699,6 +721,7 @@
 
 .s__girls_article {
   width: 165px;
+  max-width: 95%;
   margin: 33px auto 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
@@ -756,7 +779,7 @@
   text-align: center;
   margin: 14px auto 0 auto;
   font-weight: normal;
-  font-family: "TruthCYR-Regular", serif;
+  font-family: "TruthCYR-r", serif;
 }
 .s__girls_article_title::after {
   content: "";

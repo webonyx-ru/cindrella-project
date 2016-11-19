@@ -14,6 +14,11 @@ $pink: #da56e7
 $light: #eff2fb
 $yellow: #6dc101
 
+[class*='--pink-color'], .--pink-color
+	color: $pink
+
+[class*='--blue-color'], .--blue-color
+	color: #3da3ea
 
 .cl-white
 	color: $white!important
@@ -83,7 +88,9 @@ $yellow: #6dc101
 
 	&__success
 		@extend .button
-		background-color: $greenLighter
+		background-color: #00cf6b
+		position: relative
+		z-index: 1
 
 	&__danger
 		@extend .button
@@ -217,7 +224,7 @@ $yellow: #6dc101
 	position: relative
 	display: block
 	padding: 40px 0
-	font-family: 'TruthCYR-Regular', serif
+	font-family: 'TruthCYR-r', serif
 	min-width: 320px
 
 	&__title
@@ -225,7 +232,7 @@ $yellow: #6dc101
 		line-height: 1.14
 		color: $black
 		font-weight: normal
-		font-family: 'TruthCYR-Regular', serif
+		font-family: 'TruthCYR-r', serif
 
 		&_info
 			font-size: 16px
@@ -238,7 +245,7 @@ $yellow: #6dc101
 			line-height: 1.15
 			color: $black
 			font-weight: normal
-			font-family: 'TruthCYR-Regular', serif
+			font-family: 'TruthCYR-r', serif
 
 	&__text
 		font-size: 14px
@@ -246,11 +253,27 @@ $yellow: #6dc101
 		color: $black
 		margin: 6px 0 0 0
 
+h2.mb10, .mb10
+	margin-bottom: 10px
+
+.mb15
+	margin-bottom: 15px
+
+.project-small__circle
+	width: 20px
+	height: 20px
+	border-radius: 100%
+	margin-right: 5px
+
+.project-circles__section
+	& > .in_bl
+		margin: 0 15px
+
 .s__compare
 	padding: 30px 0 62px 0
 
 	.section__title
-		font-family: 'TruthCYR-Light', serif
+		font-family: 'TruthCYR', serif
 		font-weight: normal
 
 	&Info
@@ -360,7 +383,7 @@ $yellow: #6dc101
 		.article__title
 			font-size: 24px
 			margin-bottom: 10px
-			font-family: 'TruthCYR-Regular', serif
+			font-family: 'TruthCYR-r', serif
 			font-weight: normal
 
 		.article__info
@@ -413,7 +436,7 @@ $yellow: #6dc101
 			margin: 20px 0 0 0
 
 			.section__text
-				font-family: 'TruthCYR-Light', serif
+				font-family: 'TruthCYR', serif
 
 		&.s_compareInfo_grid_image
 			max-width: 420px
@@ -448,11 +471,11 @@ $yellow: #6dc101
 		&:first-child
 			text-align: right
 
-.ad__atolin
-	background-image: -webkit-linear-gradient(to right, rgba(78, 182, 255, .06), rgba(12, 117, 192, .06))
-	background-image: -moz-linear-gradient(to right, rgba(78, 182, 255, .06), rgba(12, 117, 192, .06))
-	background-image: -o-linear-gradient(to right, rgba(78, 182, 255, .06), rgba(12, 117, 192, .06))
-	background-image: linear-gradient(to right, rgba(78, 182, 255, .06), rgba(12, 117, 192, .06))
+//.ad__atolin
+//	background-image: -webkit-linear-gradient(to right, rgba(78, 182, 255, .06), rgba(12, 117, 192, .06))
+//	background-image: -moz-linear-gradient(to right, rgba(78, 182, 255, .06), rgba(12, 117, 192, .06))
+//	background-image: -o-linear-gradient(to right, rgba(78, 182, 255, .06), rgba(12, 117, 192, .06))
+//	background-image: linear-gradient(to right, rgba(78, 182, 255, .06), rgba(12, 117, 192, .06))
 
 .ad__cinderella
 	background-image: url("../images/ad_cinderella-bg.jpg")
@@ -506,6 +529,7 @@ $yellow: #6dc101
 
 .s__girls_article
 	width: 165px
+	max-width: 95%
 	margin: 33px auto 10px
 	+border_radius(10px)
 	box-shadow: 0 1px 4px 0 rgba(130, 130, 130, 0.5)
@@ -550,7 +574,7 @@ $yellow: #6dc101
 		text-align: center
 		margin: 14px auto 0 auto
 		font-weight: normal
-		font-family: 'TruthCYR-Regular', serif
+		font-family: 'TruthCYR-r', serif
 
 		&::after
 			content: ''
