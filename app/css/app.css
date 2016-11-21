@@ -509,7 +509,7 @@ h2.mb10, .mb10 {
   position: relative;
   z-index: 2;
   background: transparent;
-  padding-bottom: 100px;
+  padding-bottom: 150px;
 }
 .s__compareInfo_bg {
   background-image: url("../images/compare-info-section-bg.jpg"), -webkit-linear-gradient(to right, rgba(78, 182, 255, 0.06), rgba(12, 117, 192, 0.06));
