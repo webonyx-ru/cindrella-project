@@ -116,6 +116,28 @@ $yellow: #6dc101
 		@extend .button__large
 		background-color: $greenLighter
 
+.button__rounded
+	min-width: 159px
+	border-radius: 100px
+	box-shadow: 0 0 4px 0 rgba(238, 45, 174, 0.39)
+	height: 30px
+	font-weight: normal
+	font-family: 'TruthCYR-r', serif
+	text-align: center
+	font-size: 14px
+	color: #ffffff
+
+	&::before
+		content: ''
+		display: inline-block
+		vertical-align: middle
+		height: 100%
+
+	&_pink
+		@extend .button__rounded
+		background-image: linear-gradient(to top, #cf2dd5, #ef73f5)
+
+
 .circle__normal
 	width: 65px
 	height: 65px
@@ -280,6 +302,7 @@ h2.mb10, .mb10
 		position: relative
 		z-index: 2
 		background: transparent
+		padding-bottom: 100px
 
 		&_bg
 			background-image: url('../images/compare-info-section-bg.jpg'), -webkit-linear-gradient(to right, rgba(78, 182, 255, .06), rgba(12, 117, 192, .06))
@@ -298,6 +321,16 @@ h2.mb10, .mb10
 		.cont_wrap
 			position: relative
 			z-index: 3
+
+
+		&_bottom_b
+			position: absolute
+			bottom: 0
+			left: 40px
+			z-index: 5
+
+			.button__rounded_pink
+				margin-left: 54px
 
 	&_box
 		font-size: 0
@@ -403,6 +436,64 @@ h2.mb10, .mb10
 
 			.section__text
 				margin: 0
+
+.s__compareInfo_chatBox
+	list-style: none
+
+	> li
+		padding: 13px 0
+		+box_sizing(border-box)
+		font-size: 0
+		vertical-align: bottom
+
+		> div
+			display: inline-block
+			width: calc(100% - 54px)
+			max-width: 314px
+			min-height: 44px
+			font-size: 14px
+			line-height: 1.29
+			color: #ffffff
+			vertical-align: bottom
+
+			> p
+				background-color: #00d5a1
+				+box_sizing(border-box)
+				padding: 5px 20px
+				display: inline-block
+				font-size: 14px
+				line-height: 1.29
+				color: #ffffff
+				margin: 0
+
+				&.font-large
+					font-size: 20px
+
+
+
+			&:first-child
+				width: 54px
+				text-align: left
+				background: transparent
+				height: 44px
+				padding: 0
+
+				&::before
+					content: ''
+					display: inline-block
+					height: 100%
+					vertical-align: bottom
+
+				> i
+					vertical-align: bottom
+
+			&.rounded
+				p
+					+border_radius(44px)
+
+			&.half-rounded
+				p
+					+border_radius(44px 44px 44px 0)
 
 .s_compareInfo_box_buttons
 	list-style: none
