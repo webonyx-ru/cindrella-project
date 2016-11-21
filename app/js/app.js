@@ -29,7 +29,13 @@ CINDRELLAPROJECT.prototype.constructor = function() {
 				items:6
 			}
 		}
-	})
+	});
+
+	$('[data-scroll]').click(function (e) {
+		$('html, body').stop().animate({
+			scrollTop: $($(this).attr('href')).offset().top
+		}, 1000);
+	});
 };
 
 var app = new CINDRELLAPROJECT(document);
