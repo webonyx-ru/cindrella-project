@@ -6,3 +6,36 @@
       &.s_compareInfo_grid_image
         max-width: 300px
         margin: 0 10px
+
+  .s__compareList_grid
+
+    > div
+      float: left
+      display: block
+      width: 50%
+      margin: 10px 0
+
+      &:first-child
+        width: 100%
+        text-align: center
+
+
+      &.s__compareList_head
+        float: left
+        display: block
+        width: 50%
+        margin: 10px 0!important
+        padding: 0!important
+        font-size: 0
+        text-align: center
+
+        > h4
+          display: inline-block
+          float: none
+          padding: 0 10px
+          max-width: calc(100% - 58px)
+          width: auto
+          +box_sizing(border-box)
+
+        > i
+          vertical-align: top
