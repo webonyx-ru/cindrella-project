@@ -1110,6 +1110,11 @@ h2.mb10, .mb10 {
   line-height: 20px;
 }
 
+.form_bl .reg_form {
+  width: 100%;
+  max-width: 425px;
+}
+
 @media screen and (max-width: 767px) and (orientation: landscape) {
   .s_compareInfo_grid > div {
     width: calc(50% - 160px);
@@ -1217,5 +1222,23 @@ h2.mb10, .mb10 {
 
   .visible-small {
     display: block;
+  }
+
+  .form_bl .reg_form .name_input {
+    width: 100%;
+  }
+  .form_bl .reg_form .sex.line {
+    margin: 15px 0 0 0;
+  }
+  .form_bl .reg_form .sex.line .l_bl {
+    margin: 0;
+    width: 50%;
+  }
+  .form_bl .reg_form .l_bl {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  .form_bl .reg_form .l_bl:last-child {
+    margin-bottom: 0;
   }
 }
